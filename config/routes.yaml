@@ -1,0 +1,23 @@
+equipment_list:
+    path: api/v1/equipment
+    controller: App\Controller\MainController::indexAction
+    methods: [GET]
+
+equipment_create:
+    path: api/v1/equipment
+    controller: App\Controller\MainController::createAction
+    methods: [POST]
+
+equipment_update:
+    path: api/v1/{equipmentId}/equipment
+    controller: App\Controller\MainController::updateAction
+    methods: [PATCH]
+    requirements:
+        customerId: '\d+'
+
+equipment_delete:
+    path: api/v1/{equipmentId}/equipment
+    controller: App\Controller\MainController::deleteAction
+    methods: [DELETE]
+    requirements:
+        customerId: '\d+'
